@@ -49,7 +49,7 @@ const PlayList = ({ user }) => {
 
         <div className="flex flex-col">
           <p>Playlist</p>
-          <h2 className="text-3xl font-bold mb-4 md:text-5xl">
+          <h2 className="text-3xl font-bold mb-4 md:text-5xl capitalize">
             {user.name}'s PlayList
           </h2>
           <h4>Your Favourite Songs</h4>
