@@ -31,14 +31,14 @@ Lyriks is a web application designed to streamline task management and enhance p
 
 - User Authentication:
 
-  - Admin Login: Admins can access the system using their unique username and password to manage employee data and tasks.
+  - Admin Login: Admins can add and remove the album and song of this application using their unique username and password to manage overall data.
 
-  - Employee Login: Employees can log in with their credentials to add and view their tasks.
+  - User Login: User can log in with their credentials to listen newly add and existing songs or to access their playlist.
 
-- Employee Management:
+- Songs Management:
 
-  - Admin Dashboard: The admin has the ability to add employees, deactivate accounts, and view a list of all employees.
-  - Employee Profile Update: Employees can update their profile information and password, except for the email ID.
+  - Admin Dashboard: The admin has the ability to add albums and songs, remove songs, and view a list of all added songs.
+  - User Playlist Update: Users can update their playlist only.
 
 - Task Management:
   - Add Tasks: Employees can log tasks for each day, including task description, type (break, meeting, or work), start time, and duration.
