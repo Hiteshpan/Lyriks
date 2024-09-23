@@ -20,7 +20,7 @@ Lyriks is a web application designed to streamline task management and enhance p
 | ![admin_songs](https://github.com/user-attachments/assets/338d53d7-25b3-418c-be60-603f08a0ebc1) | ![user_songs](https://github.com/user-attachments/assets/d664d617-f10f-4803-84fd-fd5d1998f477) |
 | ![admin_mobile](https://github.com/user-attachments/assets/73232fa9-f44f-42c4-9ba8-e80c985b64ca) | ![user_mobile](https://github.com/user-attachments/assets/d2941c71-bb0a-465e-8b23-ee05e6682363) |
 | ![admin_tab](https://github.com/user-attachments/assets/6dba53f5-795a-4ed8-b68b-e2716837f01b) | ![user_tab](https://github.com/user-attachments/assets/b26a57f7-c9bc-4fd9-bd82-93d436f02d59) |
-| ![admin_addalbums](https://github.com/user-attachments/assets/131e3ab5-332e-468d-af0a-177829f67810) |                                         |
+| ![admin_addalbums](https://github.com/user-attachments/assets/131e3ab5-332e-468d-af0a-177829f67810) ||
 | ![admin_addsongs](https://github.com/user-attachments/assets/ebe70c66-251b-470f-9e5e-41a3cbf0a878) |                                         |
 | ![added_songs1](https://github.com/user-attachments/assets/5f0a2bd5-34ba-4eb5-bdec-bad673747cf5) |                                         |
 | ![added_songs2](https://github.com/user-attachments/assets/4c57003f-a7a1-4667-888e-7ffb54e8df9a) |                                         |
@@ -40,66 +40,59 @@ Lyriks is a web application designed to streamline task management and enhance p
   - Admin Dashboard: The admin has the ability to add albums and songs, remove songs, and view a list of all added songs.
   - User Playlist Update: Users can update their playlist only.
 
-- Task Management:
-  - Add Tasks: Employees can log tasks for each day, including task description, type (break, meeting, or work), start time, and duration.
-  - Date Filtering: Users can filter and view tasks and associated graphical information for specific dates.
-- Graphical Information:
-  - Pie Charts: Two pie charts display task distribution for the current day and the previous day, categorized by break, meeting, and work.
-  - Stacked Bar Chart: A stacked bar chart provides a weekly overview, showing the distribution of not working (including breaks), working (work tasks), and meetings.
+- User-Friendly:
+  - Admin and User both get the User-Frindly song player to manage the play/pause of the song and the prefered volume level of the song according to the user wants.
+  - Player also have an mute functionality if user wants he/she can mute the current song.
+- Easy-Routing:
+  - Easily rounting user-frindly buttons which is used to navigate all over the application, also a unique feature while playing songs user can navigate to different pages witgout disturbing in song playing.
+  - This application is fully screen-responsive to all the devices.
 
 ## Getting Started
 
 ### Pre-requisites
 
-1. Install [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/).
-2. Create a [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) account and set up a cluster.
+1. Create a [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) account and set up a cluster.
 
 ### Clone the repository
 
-1. Clone the repository: `git clone https://github.com/rishavchanda/Trackify.git`
+1. Clone the repository: `git clone https://github.com/Hiteshpan/Lyriks.git`
 
-### Configure the client
+### Configure the root folder(Lyriks)
 
-1. Navigate to client folder: `cd client`
-2. Build the docker image for the client in dev mode: `docker build -f Dockerfile.dev -t trackify-react-image .`
-3. Set up and configure the environment variables, create a `.env` file in the client folder and add the following environment variables:
+1. Set up and configure the environment variables, create a `.env` file in the root folder and add the following environment variables:
 
 ```
-REACT_APP_API_URL = http://localhost:8800/api
-```
+PORT_URL= your_port_number
 
-### Configure the server
+MONGO_URL= your_mongodb_cluster
 
-1. Navigate to server folder: `cd server`
-2. Build the docker image for the server in dev mode: `docker build -f Dockerfile.dev -t trackify-server-image .`
-3. Set up the database and configure the environment variables by following the instructions in the next steps.
+Jwt_secret= your_jwt_secret(it can be anything you want)
 
-### Set up the database
+Cloud_Name= your_cloudinary_name(you can get it after registration on cloudinary)
 
-1. Create a MongoDB Atlas account and set up a cluster.
-2. Create a `.env` file in the server folder and add the following environment variables:
+Cloud_Api= your_cloudinary_api
 
-```
-MONGO_URL = <MongoDB connection string>
+Cloud_Secret= your_cloudinary_secret
 ```
 
 ### Run the application
 
-1. Navigate to the root folder: `cd ..`
-2. Run the docker-compose file: `docker-compose -f docker-compose.yml -f docker-compose-dev.yml  up --build`
-3. Open the application in your browser at `http://localhost:3000`
-4. Server will be running at `http://localhost:8800`
-5. To stop the application, press `Ctrl + C` in the terminal.
+1. Navigate to the root folder: `cd ..`.
+2. Run the command `npm run build` this command will automatically install node_modules and build commands in frontend folder as needed.
+3. Run the command `node backend/index.js` to start the application.
+4. Lyriks will be running at `http://localhost:5000`.
+5. Copy this url and paste it to your browser and your application will run properly.
+6. To stop the application, press `Ctrl + C` in the terminal.
 
 ## Technologies Used
 
-- Front-End: ReactJS, HTML, CSS, JavaScript
-- Back-End: Node.js, Express.js
+- Front-End: ReactJS, HTML, Tailwind-CSS, JavaScript, Cloudinary, Jwt-Token 
+- Back-End: Node.js, Express.js, Multer.js
 - Database: MongoDB
 
 ## Contributing
 
-We welcome contributions from the community to enhance Trackify. Feel free to submit bug reports, feature requests, or pull requests through the GitHub repository.
+We welcome contributions from the community to enhance Lyriks. Feel free to submit bug reports, feature requests, or pull requests through the GitHub repository.
 
 ## License
 
@@ -107,6 +100,6 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 
 ## Contact
 
-For any questions or inquiries, please reach out to the development team at [rishavchanda0@gmail.com]
+For any questions or queries, please reach out to me at [hiteshrtk999@gmail.com]
 
-Enjoy using Trackify and stay productive!
+Enjoy using Lyriks and stay productive!
